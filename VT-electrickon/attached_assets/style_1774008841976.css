@@ -1,0 +1,121 @@
+/* VTELECTRICKON - Main Styles */
+
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    background: #f4f6f9;
+}
+
+/* Navbar */
+.navbar-brand span {
+    color: #f59e0b;
+}
+
+/* Hero Banner */
+.hero {
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+    color: white;
+    padding: 48px 0 40px;
+    margin-bottom: 40px;
+}
+.hero h1 { font-size: 2.2rem; font-weight: 700; }
+.hero p { color: #94a3b8; }
+
+/* Product Cards */
+.product-card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+.product-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    background: #f8fafc;
+    padding: 16px;
+}
+
+/* Stock Badges */
+.badge-stock-ok {
+    background: #dcfce7;
+    color: #16a34a;
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+.badge-stock-out {
+    background: #fee2e2;
+    color: #dc2626;
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+/* Price */
+.price { font-size: 1.4rem; font-weight: 700; color: #0f172a; }
+.brand-tag { font-size: 0.8rem; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px; }
+
+/* Add to Cart Button */
+.btn-cart {
+    background: #0f172a;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+.btn-cart:hover { background: #1e3a5f; color: #fff; }
+
+/* Cart Remove Button */
+.remove-btn {
+    width: 30px; height: 30px; border-radius: 50%;
+    background: #fee2e2; color: #dc2626; border: none;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1rem; text-decoration: none;
+    transition: background 0.15s; flex-shrink: 0;
+}
+.remove-btn:hover { background: #dc2626; color: #fff; }
+
+/* Payment Options */
+.payment-option {
+    border: 2px solid #e2e8f0; border-radius: 10px;
+    padding: 16px; cursor: pointer; transition: all 0.2s;
+}
+.payment-option:hover { border-color: #0f172a; background: #f8fafc; }
+.payment-option.selected { border-color: #0f172a; background: #f0f4ff; }
+
+/* Toast Notification */
+.order-toast {
+    position: fixed; top: 24px; right: 24px; z-index: 9999;
+    background: #0f172a; color: #fff; border-radius: 12px;
+    padding: 16px 20px; min-width: 280px; max-width: 340px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+    display: flex; align-items: flex-start; gap: 12px;
+    animation: slideIn 0.4s ease, fadeOut 0.5s ease 4.5s forwards;
+}
+@keyframes slideIn {
+    from { transform: translateX(120%); opacity: 0; }
+    to   { transform: translateX(0);    opacity: 1; }
+}
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to   { opacity: 0; pointer-events: none; }
+}
+
+/* Footer */
+footer {
+    background: #0f172a;
+    color: #94a3b8;
+    padding: 24px 0;
+    margin-top: 60px;
+    font-size: 0.875rem;
+}
